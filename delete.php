@@ -1,20 +1,11 @@
 <?php
-
-include 'koneksi.php';
-
-$id = $_GET['id'];
-
-$sql_delete=("DELETE FROM user WHERE id='$id' ");
-
-mysqli_query($conn,$sql_delete)or die(mysqli_error($conn));
-
+$koneksi = mysqli_connect("localhost","root","","php-api");
+$id = $_GET['id']; //$id merupakan varaibel,'id' merupakan pengambilan setelah user mengkelik hapus pada tabelname.php
+$sql_delete=("DELETE FROM user WHERE Id='$id' ");
+mysqli_query($koneksi,$sql_delete)or die(mysqli_error($koneksi));
 echo '<script>
-
 alert("Datamu Berhasil Dihapus");
-
 location="tablenama.php?"
-
 </script>';
-
 ?>
 

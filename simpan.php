@@ -7,7 +7,7 @@ $level = $_POST['Level'];
 $fullname = $_POST['Fullname'];
 
 
-$query = "INSERT INTO user  SET id='$id', username='$username', password='$password', level='$level', fullname='$fullname'";
+$query = "INSERT INTO user  SET Id='$id', Usernamse='$username', Password='$password', Level='$level', Fullname='$fullname'"; // seteelah set nama databasenta Id,Usernamse,dll
 
 mysqli_query($koneksi, $query);
 header("location:tablenama.php");

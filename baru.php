@@ -1,18 +1,12 @@
 <?php
-
 $koneksi = mysqli_connect("localhost","root","","php-api");
+$id = $_POST['Id'];
+$username = $_POST['Usernamse'];
+$password = $_POST['Password'];
+$level = $_POST['Level'];
+$fullname = $_POST['Fullname'];
 
-$id = $_POST['id'];
-
-$username = $_POST['username'];
-
-$password = $_POST['password'];
-
-$level = $_POST['level'];
-
-$fullname = $_POST['fullname'];
-
-mysqli_query($koneksi, "UPDATE user SET username='$username', password='$password', level='$level', fullname='$fullname' WHERE id='$id'");
+mysqli_query($koneksi, "UPDATE user SET Usernamse='$username', Password='$password', Level='$level', Fullname='$fullname' WHERE Id='$id'");
 
 header("location:tablenama.php");
 
